@@ -1,0 +1,33 @@
+{
+  "name": "http-relay-server",
+  "version": "0.0.178",
+  "description": "Serves HTTP and relays requests so that clients do not have to wait for a sync response.",
+  "main": "src/eyeos-http-relay-server.js",
+  "homepage": "http://www.eyeos.com/",
+  "dependencies": {
+    "amqp": "0.2.0",
+    "eyeos-auth": "*",
+    "eyeos-service-ready-notify": "*",
+    "log2out": "*",
+    "node-uuid": "1.4.1"
+  },
+  "devDependencies": {
+    "chai": "1.9.1",
+    "eyeos-amqp": "*",
+    "eyeos-gruntfile": "*",
+    "grunt": "0.4.5",
+    "grunt-mocha-test": "0.12.0",
+    "grunt-shell": "1.1.1",
+    "proxyquire": "^1.7.4",
+    "request": "2.44.0",
+    "sinon": "1.10.3"
+  },
+  "microservices": [
+    "rabbit.service.consul:5672"
+  ],
+  "scripts": {
+    "test": "mocha -u tdd src/test"
+  },
+  "author": "eyeOS",
+  "license": "AGPL-3.0"
+}

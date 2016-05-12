@@ -1,0 +1,7 @@
+node_modules/
+*.log
+commit.properties
+.idea/
+contents/
+pkgs/
+build/
