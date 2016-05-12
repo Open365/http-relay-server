@@ -1,6 +1,6 @@
 {
   "name": "http-relay-server",
-  "version": "0.0.178",
+  "version": "0.0.179",
   "description": "Serves HTTP and relays requests so that clients do not have to wait for a sync response.",
   "main": "src/eyeos-http-relay-server.js",
   "homepage": "http://www.eyeos.com/",
