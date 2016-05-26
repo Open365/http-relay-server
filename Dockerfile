@@ -17,8 +17,6 @@ WORKDIR ${InstallationDir}
 
 ENV WHATAMI httprelay
 
-RUN mkdir -p ${InstallationDir}/src/ && touch ${InstallationDir}/src/http-relay-installed.js
-
 CMD eyeos-run-server --serf ${InstallationDir}/src/eyeos-http-relay-server.js
 
 COPY . ${InstallationDir}
