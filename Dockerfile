@@ -28,7 +28,7 @@ EXPOSE 1080
 RUN apk update && apk add --no-cache curl make gcc g++ git python dnsmasq bash krb5-dev && \
     npm install --verbose --production && \
     npm cache clean && \
-    apk del openssl ca-certificates libssh2 curl binutils-libs binutils gmp isl \
+    apk del openssl ca-certificates libssh2 curl binutils-libs binutils gmp isl bash \
     libgomp libatomic pkgconf pkgconfig mpfr3 mpc1 gcc musl-dev libc-dev g++ expat krb5-dev \
     pcre git make libbz2 libffi gdbm ncurses-terminfo-base ncurses-terminfo ncurses-libs readline sqlite-libs python && \
     rm -rf /etc/ssl /var/cache/apk/* /tmp/*
