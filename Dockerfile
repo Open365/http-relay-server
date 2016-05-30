@@ -26,10 +26,8 @@ COPY . ${InstallationDir}
 EXPOSE 1080
 
 RUN apk update && \
-    /scripts-base/installExtraBuild.sh && \
-    apk add --no-cache krb5-dev && \
+    /scripts-base/installExtraBuild.sh krb5-dev && \
     npm install --verbose --production && \
     npm cache clean && \
-    /scripts-base/deleteExtraBuild.sh && \
-    apk del krb5-dev && \
+    /scripts-base/deleteExtraBuild.sh krb5-dev && \
     rm -rf /etc/ssl /var/cache/apk/* /tmp/*
