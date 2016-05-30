@@ -16,8 +16,9 @@
     "eyeos-amqp": "*",
     "eyeos-gruntfile": "*",
     "grunt": "0.4.5",
-    "grunt-mocha-test": "0.12.0",
+    "grunt-mocha-test": "0.12.7",
     "grunt-shell": "1.1.1",
+    "mocha": "2.5.3",
     "proxyquire": "^1.7.4",
     "request": "2.44.0",
     "sinon": "1.10.3"
