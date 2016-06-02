@@ -21,13 +21,14 @@ WORKDIR ${InstallationDir}
 
 CMD eyeos-run-server --serf ${InstallationDir}/src/eyeos-http-relay-server.js
 
+COPY alpine-*.list /var/service/
 COPY . ${InstallationDir}
 
 EXPOSE 1080
 
 RUN apk update && \
-    /scripts-base/installExtraBuild.sh krb5-dev && \
+    /scripts-base/buildDependencies.sh --production --install && \
     npm install --verbose --production && \
     npm cache clean && \
-    /scripts-base/deleteExtraBuild.sh krb5-dev && \
+    /scripts-base/buildDependencies.sh --production --purgue && \
     rm -rf /etc/ssl /var/cache/apk/* /tmp/*
