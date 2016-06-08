@@ -21,7 +21,6 @@ WORKDIR ${InstallationDir}
 
 CMD eyeos-run-server --serf ${InstallationDir}/src/eyeos-http-relay-server.js
 
-COPY alpine-*.list /var/service/
 COPY . ${InstallationDir}
 
 EXPOSE 1080
