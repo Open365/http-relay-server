@@ -25,8 +25,7 @@ COPY . ${InstallationDir}
 
 EXPOSE 1080
 
-RUN apk update && \
-    /scripts-base/buildDependencies.sh --production --install && \
+RUN /scripts-base/buildDependencies.sh --production --install && \
     npm install --verbose --production && \
     npm cache clean && \
     /scripts-base/buildDependencies.sh --production --purgue && \
