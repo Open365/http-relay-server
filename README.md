@@ -9,7 +9,7 @@ URLs are expected in the form:
 /destinationName/apiVersion/param1/value1/param2/value2 ...
 
 HTTP Requests are:
-* Authenticated via **eyeos-auht**
+* Authenticated via **eyeos-auth**
 * Transform the request to RestUtils-like messages
 * Extract the target exchange name from the URL  ***(currently, only exchanges are supported)***
 * In case the user is unauthorized, forbidden to publish or the exchange is not found, the message, and error information is sent to a deadletter queue (see settings).
